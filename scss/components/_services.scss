@@ -1,0 +1,52 @@
+.services {
+  position: relative;
+  &__main-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  &__wrap {
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0 4px $borderColor;
+    background-color: rgba(43, 42, 41, 0.5);
+    padding: 15px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    border-bottom: 1px solid $borderColor;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  &__description {
+    font-size: 12px;
+    line-height: 150%;
+    color: $textColor;
+    margin-bottom: 15px;
+  }
+  &__icon-wrap {
+    display: none;
+  }
+}
+.big-circle {
+    position: absolute;
+  width: 365px;
+  height: 365px;
+  background-image: url("../images/big-elipse.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 23px;
+  left: -183px;
+}

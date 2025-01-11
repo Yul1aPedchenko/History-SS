@@ -31,64 +31,104 @@
   <body>
     <header class="header">
       <div class="container">
-        <a href="./index.html" class="header__link">
-          <svg class="header__logo">
-            <use href="./images/symbol-defs.svg#icon-logo"></use>
-          </svg>
-        </a>
+        <div class="header__wrap">
+          <a href="./index.html" class="header__link">
+            <svg class="header__logo">
+              <use href="./images/symbol-defs.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </header>
     <main>
-      <div class="container">
-        <section class="hero">
+      <section class="hero">
+        <div class="container">
           <h1 class="hero__title">Ремонт авто у <span>Львові</span> </h1>
           <p class="hero__text">
             І<span>СТО</span>РІЯ - сервіс, який займається проведенням
             технічного обслуговування, ремонту та діагностики різних автомобілів
           </p>
           <button class="hero__btn">Звʼязатися</button>
-        </section>
+        </div>
+      </section>
 
-        <section class="services" id="services">
-          <h2 class="services__title">Послуги</h2>
-          <div class="services__wrap">
-            <ul class="services__list">
-              <li class="services__item">
-                <h3 class="services__subtitle">
-                  Технічне обслуговування та ремонт ходової
-                </h3>
-                <p class="services__description">
-                  Наші майстри перевірять і відремонтують все, що потрібно, щоб
-                  ваш авто їздив безпечно.
-                </p>
-              </li>
-              <li class="services__item">
-                <h3 class="services__subtitle">Кузовний ремонт</h3>
-                <p class="services__description">
-                  Фахівці забезпечать якісний ремонт будь-яких пошкоджень
-                  кузова, від незначних подряпин до серйозних деформацій.
-                </p>
-              </li>
-              <li class="services__item">
-                <h3 class="services__subtitle">
-                  Видалення вмʼятин без фарбування
-                </h3>
-                <p class="services__description">
-                  Ми можемо ефективно виправити будь-які вмʼятини на вашому
-                  автомобілі, абсолютно без фарбування.
-                </p>
-              </li>
-              <li class="services__item">
-                <h3 class="services__subtitle">Продаж запчастин</h3>
-                <p class="services__description">
-                  Пропонуємо широкий вибір якісних запчастин для вашого
-                  автомобіля за доступними цінами.
-                </p>
-              </li>
-            </ul>
+      <section class="services" id="services">
+        <div class="big-circle"></div>
+        <div class="small-circle"></div>
+        <div class="container">
+          <div class="services__main-wrap">
+            <h2 class="services__title">Послуги</h2>
+            <div class="services__wrap">
+              <ul class="services__list">
+                <li class="services__item">
+                  <div class="services__icon-wrap">
+                    <svg class="services__icon">
+                      <use href="./images/symbol-defs.svg#icon-tool"></use>
+                    </svg>
+                  </div>
+                  <div class="services__subwrap">
+                    <h3 class="services__subtitle">
+                      Технічне обслуговування та ремонт ходової
+                    </h3>
+                    <p class="services__description">
+                      Наші майстри перевірять і відремонтують все, що потрібно,
+                      щоб ваш авто їздив безпечно.
+                    </p>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="services__icon-wrap">
+                    <svg class="services__icon">
+                      <use
+                        href="./images/symbol-defs.svg#icon-body-repair"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="services__subwrap">
+                    <h3 class="services__subtitle">Кузовний ремонт</h3>
+                    <p class="services__description">
+                      Фахівці забезпечать якісний ремонт будь-яких пошкоджень
+                      кузова, від незначних подряпин до серйозних деформацій.
+                    </p>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="services__icon-wrap">
+                    <svg class="services__icon">
+                      <use href="./images/symbol-defs.svg#icon-brush-off"></use>
+                    </svg>
+                  </div>
+                  <div class="services__subwrap">
+                    <h3 class="services__subtitle">
+                      Видалення вмʼятин без фарбування
+                    </h3>
+                    <p class="services__description">
+                      Ми можемо ефективно виправити будь-які вмʼятини на вашому
+                      автомобілі, абсолютно без фарбування.
+                    </p>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="services__icon-wrap">
+                    <svg class="services__icon">
+                      <use
+                        href="./images/symbol-defs.svg#icon-settings-dollar"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="services__subwrap">
+                    <h3 class="services__subtitle">Продаж запчастин</h3>
+                    <p class="services__description">
+                      Пропонуємо широкий вибір якісних запчастин для вашого
+                      автомобіля за доступними цінами.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="container">

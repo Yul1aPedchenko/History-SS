@@ -1,0 +1,128 @@
+.hero {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  background-image: linear-gradient(
+      90deg,
+      #2b2a29 0%,
+      rgba(43, 42, 41, 0.98) 23.95%,
+      rgba(43, 42, 41, 0.8) 67.55%,
+      rgba(43, 42, 41, 0.3) 87.55%,
+      rgba(102, 102, 102, 0) 100%
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+    url("../images/bg-mobile-sm@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  &__title {
+    font-weight: 700;
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  &__title span {
+    color: $accentColor;
+  }
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  &__text span {
+    font-weight: 700;
+    color: $accentColor;
+  }
+  &__btn {
+    padding: 0 55px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    background-color: transparent;
+    border: 1px solid $accentColor;
+    border-radius: 30px;
+    color: $titleColor;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+@supports (
+  background-image:
+    linear-gradient(
+      90deg,
+      #2b2a29 0%,
+      rgba(43, 42, 41, 0.98) 23.95%,
+      rgba(43, 42, 41, 0.8) 67.55%,
+      rgba(43, 42, 41, 0.3) 87.55%,
+      rgba(102, 102, 102, 0) 100%
+    ),
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.2) 100%,
+  ),
+  url("../images/bg-mobile-sm@1x.webp")
+) {
+  .hero {
+    background-image: linear-gradient(
+        90deg,
+        #2b2a29 0%,
+        rgba(43, 42, 41, 0.98) 23.95%,
+        rgba(43, 42, 41, 0.8) 67.55%,
+        rgba(43, 42, 41, 0.3) 87.55%,
+        rgba(102, 102, 102, 0) 100%
+      ),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+      url("../images/bg-mobile-sm@1x.webp");
+    background-size: cover;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        90deg,
+        #2b2a29 0%,
+        rgba(43, 42, 41, 0.98) 23.95%,
+        rgba(43, 42, 41, 0.8) 67.55%,
+        rgba(43, 42, 41, 0.3) 87.55%,
+        rgba(102, 102, 102, 0) 100%
+      ),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+      url("../images/bg-mobile-sm@2x.png");
+    background-size: cover;
+  }
+  @supports (
+    background-image:
+      linear-gradient(
+        90deg,
+        #2b2a29 0%,
+        rgba(43, 42, 41, 0.98) 23.95%,
+        rgba(43, 42, 41, 0.8) 67.55%,
+        rgba(43, 42, 41, 0.3) 87.55%,
+        rgba(102, 102, 102, 0) 100%
+      ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%,
+    ),
+    url("../images/bg-mobile-sm@2x.webp")
+  ) {
+    .hero {
+      background-image: linear-gradient(
+          90deg,
+          #2b2a29 0%,
+          rgba(43, 42, 41, 0.98) 23.95%,
+          rgba(43, 42, 41, 0.8) 67.55%,
+          rgba(43, 42, 41, 0.3) 87.55%,
+          rgba(102, 102, 102, 0) 100%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+        url("../images/bg-mobile-sm@2x.webp");
+      background-size: cover;
+    }
+  }
+}
