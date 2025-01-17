@@ -219,6 +219,9 @@ use {
   color: #999;
   margin-bottom: 15px;
 }
+.services__icon-wrap {
+  display: none;
+}
 
 .big-circle {
   position: absolute;
