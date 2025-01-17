@@ -21,15 +21,46 @@
   }
   &__subitem {
     margin-top: 15px;
+  }
+  &__link {
     font-weight: 500;
     font-size: 12px;
     color: $textColor;
+    transition: color 250ms ease-in-out;
   }
-  &__link {
-    color: $textColor;
+  &__link:hover {
+    color: $textHover;
   }
 }
-
 .map-container {
-    border-radius: 8px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .footer {
+    &__wrap {
+      padding: 40px 0;
+    }
+    &__list {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    &__item {
+      margin-bottom: 60px;
+    }
+    &__item:first-child {
+      text-align: center;
+    }
+    &__item:last-child {
+      text-align: center;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__subitem {
+      margin-top: 25px;
+    }
+    &__link {
+      font-size: 20px;
+    }
+  }
 }

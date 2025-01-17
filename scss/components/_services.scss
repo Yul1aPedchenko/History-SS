@@ -1,6 +1,7 @@
 .services {
+  padding-bottom: 50px;
   position: relative;
-  margin-bottom: 50px;
+  overflow: hidden;
   &__main-wrap {
     display: flex;
     flex-direction: column;
@@ -23,9 +24,12 @@
     display: flex;
     flex-direction: column;
   }
-  &__item {
+  &__item:not(:last-child) {
     border-bottom: 1px solid $borderColor;
     margin-bottom: 15px;
+    .services__description {
+      margin-bottom: 15px;
+    }
   }
   &__subtitle {
     font-weight: 500;
@@ -35,7 +39,6 @@
     font-size: 12px;
     line-height: 150%;
     color: $textColor;
-    margin-bottom: 15px;
   }
   &__icon-wrap {
     display: none;
@@ -45,7 +48,7 @@
   position: absolute;
   width: 365px;
   height: 365px;
-  background-image: url("../images/big-elipse.svg");
+  background-image: url("../images/elipse/big-elipse.svg");
   background-size: contain;
   background-repeat: no-repeat;
   top: 23px;
@@ -55,9 +58,46 @@
   position: absolute;
   width: 340px;
   height: 340px;
-  background-image: url("../images/small-elipse.svg");
+  background-image: url("../images/elipse/small-elipse.svg");
   background-size: contain;
   background-repeat: no-repeat;
   top: 308px;
   right: -170px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .services {
+    padding-bottom: 60px;
+    &__main-wrap {
+      padding: 20px;
+    }
+    &__title {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    &__wrap {
+      padding: 45px;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 20px;
+      .services__description {
+        margin-bottom: 20px;
+      }
+    }
+    &__description {
+      font-size: 14px;
+    }
+  }
+  .big-circle {
+    width: 390px;
+    height: 390px;
+    top: 59px;
+    left: -175px;
+  }
+  .small-circle {
+    width: 370px;
+    height: 370px;
+    top: 368px;
+    right: -162px;
+  }
 }

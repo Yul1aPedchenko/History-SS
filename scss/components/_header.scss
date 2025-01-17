@@ -12,3 +12,10 @@
         height: 25px;
     }
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .header {
+    &__logo {
+        height: 30px;
+    }
+  }
+}

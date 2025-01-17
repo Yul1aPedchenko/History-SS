@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__wrap">
           <a href="./index.html" class="header__link">
-            <img class="header__logo" src="./images/logo.svg" alt="logo">
+            <img class="header__logo" src="./images/logo.svg" alt="logo" />
           </a>
         </div>
       </div>
@@ -41,12 +41,15 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="hero__title">Ремонт авто у <span>Львові</span> </h1>
-          <p class="hero__text">
-            І<span>СТО</span>РІЯ - сервіс, який займається проведенням
-            технічного обслуговування, ремонту та діагностики різних автомобілів
-          </p>
-          <button class="hero__btn">Звʼязатися</button>
+          <div class="hero__wrap">
+            <h1 class="hero__title">Ремонт авто у <span>Львові</span> </h1>
+            <p class="hero__text">
+              І<span>СТО</span>РІЯ - сервіс, який займається проведенням
+              технічного обслуговування, ремонту та діагностики різних
+              автомобілів
+            </p>
+            <button class="hero__btn">Звʼязатися</button>
+          </div>
         </div>
       </section>
 
@@ -136,7 +139,7 @@
               <h2 class="footer__title">Навігація</h2>
               <ul class="footer__sublist">
                 <li class="footer__subitem">
-                  <a href="./index.html" class="footer__link">Головна</a>
+                  <a href="#header" class="footer__link">Головна</a>
                 </li>
                 <li class="footer__subitem">
                   <a href="#services" class="footer__link">Послуги</a>
@@ -150,14 +153,19 @@
               <h2 class="footer__title">Контакти</h2>
               <ul class="footer__sublist">
                 <li class="footer__subitem">
-                  Відділ ТО: <a class="footer__link" href="tel:+380679401888">+380679401888</a>
+                  <a class="footer__link" href="tel:+380679401888"
+                    >Відділ ТО: +380679401888</a
+                  >
                 </li>
                 <li class="footer__subitem">
-                  Кузовний ремонт: <a class="footer__link" href="tel:+380679401888">+380679401888</a>
+                  <a class="footer__link" href="tel:+380679401888"
+                    >Кузовний ремонт: +380679401888</a
+                  >
                 </li>
                 <li class="footer__subitem">
-                  Відділ запчастин:
-                  <a class="footer__link" href="tel:+380679401888">+380679401888</a>
+                  <a class="footer__link" href="tel:+380679401888"
+                    >Відділ запчастин: +380679401888</a
+                  >
                 </li>
               </ul>
             </li>
