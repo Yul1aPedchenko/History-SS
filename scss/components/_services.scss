@@ -1,5 +1,6 @@
 .services {
   position: relative;
+  margin-bottom: 50px;
   &__main-wrap {
     display: flex;
     flex-direction: column;
@@ -41,7 +42,7 @@
   }
 }
 .big-circle {
-    position: absolute;
+  position: absolute;
   width: 365px;
   height: 365px;
   background-image: url("../images/big-elipse.svg");
@@ -49,4 +50,14 @@
   background-repeat: no-repeat;
   top: 23px;
   left: -183px;
+}
+.small-circle {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background-image: url("../images/small-elipse.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 308px;
+  right: -170px;
 }

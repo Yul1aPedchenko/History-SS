@@ -168,6 +168,7 @@ use {
 }
 .services {
   position: relative;
+  margin-bottom: 50px;
 }
 .services__main-wrap {
   display: -webkit-box;
@@ -232,4 +233,55 @@ use {
   background-repeat: no-repeat;
   top: 23px;
   left: -183px;
+}
+
+.small-circle {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background-image: url("../images/small-elipse.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 308px;
+  right: -170px;
+}
+
+.footer {
+  border-top: 1px solid #393837;
+}
+.footer__wrap {
+  padding-top: 15px;
+  text-align: center;
+}
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+.footer__item:first-child {
+  text-align: left;
+}
+.footer__item:last-child {
+  text-align: right;
+}
+.footer__title {
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer__subitem {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #999;
+}
+.footer__link {
+  color: #999;
+}
+
+.map-container {
+  border-radius: 8px;
 }/*# sourceMappingURL=main.css.map */
