@@ -19,3 +19,13 @@
     }
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .header {
+        &__wrap {
+            padding: 28px 0;
+        }
+        &__logo {
+            height: 39px;
+        }
+    }
+}

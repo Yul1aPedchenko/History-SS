@@ -25,10 +25,12 @@
     flex-direction: column;
   }
   &__item:not(:last-child) {
-    border-bottom: 1px solid $borderColor;
-    margin-bottom: 15px;
-    .services__description {
+    .services__item-wrap {
+      border-bottom: 1px solid $borderColor;
       margin-bottom: 15px;
+      .services__description {
+        margin-bottom: 15px;
+      }
     }
   }
   &__subtitle {
@@ -65,7 +67,7 @@
   right: -170px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 480px) {
   .services {
     padding-bottom: 60px;
     &__main-wrap {
@@ -78,7 +80,7 @@
     &__wrap {
       padding: 45px;
     }
-    &__item:not(:last-child) {
+    &__item-wrap:not(:last-child) {
       margin-bottom: 20px;
       .services__description {
         margin-bottom: 20px;
@@ -99,5 +101,61 @@
     height: 370px;
     top: 368px;
     right: -162px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .services {
+    &__wrap {
+      padding: 20px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__item-wrap {
+      width: 319px;
+      padding: 10px 0;
+    }
+    &__item:not(:last-child) {
+      .services__item-wrap {
+        border-bottom: none;
+        margin-bottom: 0;
+        .services__description {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    &__item:nth-child(1) {
+      
+      .services__item-wrap {
+        border-right: 1px solid $borderColor;
+        padding-right: 20px;
+      }
+      .services__description {
+        margin-bottom: 0;
+      }
+    }
+    &__item:nth-child(4) {
+      
+      .services__item-wrap {
+        padding-left: 20px;
+        border-left: 1px solid $borderColor;
+      }
+      .services__description {
+        margin-bottom: 0;
+      }
+    }
+    // }
+    // &__item:last-child,
+    // &__item:nth-child(3) {
+    //   .services__item-wrap {
+    //     margin-bottom: 0;
+    //     .services__description {
+    //       margin-bottom: 0;
+    //     }
+    //   }
+    // }
   }
 }
