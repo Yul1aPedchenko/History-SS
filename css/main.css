@@ -329,7 +329,7 @@ use {
           backdrop-filter: blur(20px);
   -webkit-box-shadow: 0 0 0 4px #393837;
           box-shadow: 0 0 0 4px #393837;
-  background-color: rgba(43, 42, 41, 0.5);
+  background-color: rgba(43, 42, 41, 0.2);
   padding: 15px;
 }
 .services__list {
@@ -351,6 +351,7 @@ use {
 .services__subtitle {
   font-weight: 500;
   margin-bottom: 15px;
+  font-size: 16px;
 }
 .services__description {
   font-size: 12px;
@@ -383,7 +384,7 @@ use {
   right: -170px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .services {
     padding-bottom: 60px;
   }
@@ -420,8 +421,13 @@ use {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .services__title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
   .services__wrap {
     padding: 20px;
+    max-width: 738px;
   }
   .services__list {
     display: -webkit-box;
@@ -433,13 +439,17 @@ use {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-  .services__item-wrap {
-    width: 319px;
+  .services__item {
+    width: 329px;
+    height: 138px;
     padding: 10px 0;
+  }
+  .services__item:nth-child(2) .services__item-wrap {
+    padding-right: 10px;
   }
   .services__item:not(:last-child) .services__item-wrap {
     border-bottom: none;
@@ -448,19 +458,44 @@ use {
   .services__item:not(:last-child) .services__item-wrap .services__description {
     margin-bottom: 0px;
   }
-  .services__item:nth-child(1) .services__item-wrap {
+  .services__item:nth-child(1) {
     border-right: 1px solid #393837;
     padding-right: 20px;
+    width: 349px;
+    padding-left: 10px;
+    margin-right: 20px;
   }
-  .services__item:nth-child(1) .services__description {
-    margin-bottom: 0;
+  .services__item:nth-child(2) {
+    border-bottom: 1px solid #393837;
+    height: 158px;
+    padding-bottom: 30px;
+    padding-right: 10px;
   }
-  .services__item:nth-child(4) .services__item-wrap {
+  .services__item:nth-child(3) {
+    border-top: 1px solid #393837;
+    height: 158px;
+    padding-top: 30px;
+    padding-left: 10px;
+    margin-right: 20px;
+  }
+  .services__item:nth-child(4) {
+    width: 349px;
+    padding-right: 10px;
     padding-left: 20px;
     border-left: 1px solid #393837;
+    margin-top: 20px;
   }
-  .services__item:nth-child(4) .services__description {
-    margin-bottom: 0;
+  .big-circle {
+    width: 480px;
+    height: 480px;
+    left: -240px;
+    top: 13px;
+  }
+  .small-circle {
+    width: 450px;
+    height: 450px;
+    top: 138px;
+    right: -90px;
   }
 }
 .gallery__list {

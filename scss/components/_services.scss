@@ -17,7 +17,7 @@
     border-radius: 12px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 0 4px $borderColor;
-    background-color: rgba(43, 42, 41, 0.5);
+    background-color: rgba(43, 42, 41, 0.2);
     padding: 15px;
   }
   &__list {
@@ -36,6 +36,7 @@
   &__subtitle {
     font-weight: 500;
     margin-bottom: 15px;
+    font-size: 16px;
   }
   &__description {
     font-size: 12px;
@@ -67,7 +68,7 @@
   right: -170px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .services {
     padding-bottom: 60px;
     &__main-wrap {
@@ -105,18 +106,29 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .services {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
     &__wrap {
       padding: 20px;
+      max-width: 738px;
     }
     &__list {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-evenly;
     }
-    &__item-wrap {
-      width: 319px;
+    &__item {
+      width: 329px;
+      height: 138px;
       padding: 10px 0;
+    }
+    &__item:nth-child(2) {
+      .services__item-wrap {
+        padding-right: 10px;
+      }
     }
     &__item:not(:last-child) {
       .services__item-wrap {
@@ -128,34 +140,43 @@
       }
     }
     &__item:nth-child(1) {
-      
-      .services__item-wrap {
-        border-right: 1px solid $borderColor;
-        padding-right: 20px;
-      }
-      .services__description {
-        margin-bottom: 0;
-      }
+      border-right: 1px solid $borderColor;
+      padding-right: 20px;
+      width: 349px;
+      padding-left: 10px;
+      margin-right: 20px;
+    }
+    &__item:nth-child(2) {
+      border-bottom: 1px solid $borderColor;
+      height: 158px;
+      padding-bottom: 30px;
+      padding-right: 10px;
+    }
+    &__item:nth-child(3) {
+      border-top: 1px solid $borderColor;
+      height: 158px;
+      padding-top: 30px;
+      padding-left: 10px;
+      margin-right: 20px;
     }
     &__item:nth-child(4) {
-      
-      .services__item-wrap {
-        padding-left: 20px;
-        border-left: 1px solid $borderColor;
-      }
-      .services__description {
-        margin-bottom: 0;
-      }
+      width: 349px;
+      padding-right: 10px;
+      padding-left: 20px;
+      border-left: 1px solid $borderColor;
+      margin-top: 20px;
     }
-    // }
-    // &__item:last-child,
-    // &__item:nth-child(3) {
-    //   .services__item-wrap {
-    //     margin-bottom: 0;
-    //     .services__description {
-    //       margin-bottom: 0;
-    //     }
-    //   }
-    // }
+  }
+  .big-circle {
+    width: 480px;
+    height: 480px;
+    left: -240px;
+    top: 13px;
+  }
+  .small-circle {
+    width: 450px;
+    height: 450px;
+    top: 138px;
+    right: -90px;
   }
 }
