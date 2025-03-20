@@ -34,6 +34,7 @@
 }
 .map-container {
   border-radius: 8px;
+  overflow: hidden;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .footer {
@@ -58,6 +59,22 @@
     }
     &__subitem {
       margin-top: 25px;
+    }
+    &__link {
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer {
+    &__wrap {
+      padding: 50px 0;
+    }
+    &__item:last-child {
+      text-align: right;
+    }
+    &__title {
+      font-size: 24px;
     }
     &__link {
       font-size: 20px;

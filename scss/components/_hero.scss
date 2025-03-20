@@ -36,16 +36,16 @@
     padding: 0 55px;
     padding-top: 13px;
     padding-bottom: 12px;
-    background-color: transparent;
+    background-color: $accentColor;
     border: 1px solid $accentColor;
+    color: black;
     border-radius: 30px;
-    color: $titleColor;
     display: flex;
     margin: 0 auto;
   }
   &__btn:hover {
-    background-color: $accentColor;
-    color: black;
+    background-color: transparent;
+    color: $titleColor;
   }
 }
 @supports (
@@ -350,6 +350,8 @@
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 100px;
+    padding-bottom: 90px;
     background-color: linear-gradient(
         90deg,
         #2b2a29 0%,
