@@ -125,6 +125,14 @@ use {
     height: 39px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .header__wrap {
+    padding: 35px 0;
+  }
+  .header__logo {
+    height: 52px;
+  }
+}
 .hero {
   padding-top: 30px;
   padding-bottom: 50px;
@@ -164,6 +172,8 @@ use {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  -webkit-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 .hero__btn:hover {
   background-color: transparent;
@@ -308,8 +318,10 @@ use {
 }
 .services {
   padding-bottom: 50px;
-  position: relative;
   overflow: hidden;
+}
+.services .freeze-container {
+  position: relative;
 }
 .services__main-wrap {
   display: -webkit-box;
@@ -386,7 +398,7 @@ use {
   background-image: url("../images/elipse/small-elipse.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 308px;
+  top: 258px;
   right: -170px;
 }
 
@@ -507,7 +519,7 @@ use {
     width: 450px;
     height: 450px;
     top: 138px;
-    right: -90px;
+    right: -150px;
   }
 }
 .gallery {
@@ -679,7 +691,7 @@ use {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__wrap {
     padding: 50px 0;
   }
@@ -691,5 +703,31 @@ use {
   }
   .footer__link {
     font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__item:last-child {
+    text-align: left;
+    margin-left: 94px;
+  }
+  .footer__title {
+    margin-bottom: 10px;
+  }
+  .footer__subitem {
+    margin-top: 20px;
+  }
+  .map-container {
+    width: 400px;
+    height: 200px;
   }
 }/*# sourceMappingURL=main.css.map */

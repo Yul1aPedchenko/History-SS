@@ -65,7 +65,7 @@
     }
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer {
     &__wrap {
       padding: 50px 0;
@@ -79,5 +79,28 @@
     &__link {
       font-size: 20px;
     }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__wrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    &__item:last-child{
+      text-align: left;
+      margin-left: 94px;
+    }
+    &__title {
+      margin-bottom: 10px;
+    }
+    &__subitem {
+      margin-top: 20px;
+    }
+  }
+  .map-container {
+    width: 400px;
+    height: 200px;
   }
 }
