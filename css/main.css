@@ -661,30 +661,38 @@ use {
 .gallery__item {
   background-color: bisque;
   border-radius: 4px;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .gallery__item:nth-child(1) {
   grid-area: a;
+  background-image: url("../images/car/first.png");
 }
 
 .gallery__item:nth-child(2) {
   grid-area: b;
+  background-image: url("../images/car/second.png");
 }
 
 .gallery__item:nth-child(3) {
   grid-area: c;
+  background-image: url("../images/car/third.png");
 }
 
 .gallery__item:nth-child(4) {
   grid-area: d;
+  background-image: url("../images/car/fifth.png");
 }
 
 .gallery__item:nth-child(5) {
   display: none;
+  background-image: url("../images/car/fifth.png");
 }
 
 .gallery__item:nth-child(6) {
   display: none;
+  background-image: url("../images/car/sixth.png");
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -702,6 +710,10 @@ use {
     gap: 18px;
     height: 486px;
     grid-template-areas: "a b c" "a b c" "a b c" "a d c" "a d f" "e d f" "e d f" "e d f";
+  }
+  .gallery__item:nth-child(4) {
+    grid-area: d;
+    background-image: url("../images/car/forth.png");
   }
   .gallery__item:nth-child(5) {
     grid-area: e;
@@ -725,6 +737,10 @@ use {
   .gallery__list {
     gap: 30px;
     height: 771px;
+  }
+  .gallery__item:nth-child(4) {
+    grid-area: d;
+    background-image: url("../images/car/forth.png");
   }
   .gallery__item:nth-child(5) {
     grid-area: e;
