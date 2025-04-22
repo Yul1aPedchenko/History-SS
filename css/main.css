@@ -181,9 +181,7 @@ use {
   border: 1px solid #39FF14;
   color: black;
   border-radius: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   margin: 0 auto;
   -webkit-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
   transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
@@ -759,7 +757,7 @@ use {
   border-top: 1px solid #393837;
 }
 .footer__wrap {
-  padding-top: 15px;
+  padding: 15px;
   text-align: center;
 }
 .footer__list {
@@ -798,6 +796,16 @@ use {
 .map-container {
   border-radius: 8px;
   overflow: hidden;
+}
+
+.map-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 320px;
+  color: #fff;
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {

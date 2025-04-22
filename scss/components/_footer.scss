@@ -1,7 +1,7 @@
 .footer {
   border-top: 1px solid $borderColor;
   &__wrap {
-    padding-top: 15px;
+    padding: 15px;
     text-align: center;
   }
   &__list {
@@ -36,6 +36,14 @@
   border-radius: 8px;
   overflow: hidden;
 }
+.map-link {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 320px;
+  color: $titleColor;
+}
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .footer {
     &__wrap {

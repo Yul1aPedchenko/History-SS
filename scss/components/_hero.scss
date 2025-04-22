@@ -40,7 +40,7 @@
     border: 1px solid $accentColor;
     color: black;
     border-radius: 30px;
-    display: flex;
+    display: inline-block;
     margin: 0 auto;
     transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
   }
