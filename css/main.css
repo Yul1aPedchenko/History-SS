@@ -762,9 +762,15 @@ use {
     gap: 30px;
     height: 771px;
   }
+  .gallery__item:nth-child(1) {
+    background-size: 700px;
+    background-position-y: 640px;
+    background-position-x: 450px;
+  }
   .gallery__item:nth-child(4) {
     grid-area: d;
-    background-image: url("../images/car/forth.png");
+    background-image: url("../images/car/black_audi.jpeg");
+    background-position-x: 410px;
   }
   .gallery__item:nth-child(5) {
     grid-area: e;
@@ -777,6 +783,9 @@ use {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    background-position-y: 660px;
+    background-size: 500px;
+    background-image: url("../images/car/red_car_sto.jpeg");
   }
 }
 .footer {
@@ -830,7 +839,7 @@ use {
   display: flex;
   margin: 0 auto;
   margin-top: 10px;
-  width: 320px;
+  max-width: 320px;
   color: #fff;
 }
 
