@@ -665,7 +665,10 @@ use {
 
 .gallery__item:nth-child(1) {
   grid-area: a;
-  background-image: url("../images/car/first.png");
+  background-image: url("../images/car/yellow_mustang.jpeg");
+  background-size: 400px;
+  background-position-y: 340px;
+  background-position-x: 270px;
 }
 
 .gallery__item:nth-child(2) {
@@ -675,12 +678,12 @@ use {
 
 .gallery__item:nth-child(3) {
   grid-area: c;
-  background-image: url("../images/car/third.png");
+  background-image: url("../images/car/grey_bmw.jpeg");
 }
 
 .gallery__item:nth-child(4) {
   grid-area: d;
-  background-image: url("../images/car/fifth.png");
+  background-image: url("../images/car/forth.png");
 }
 
 .gallery__item:nth-child(5) {
@@ -698,6 +701,11 @@ use {
     height: 486px;
     gap: 16px;
   }
+  .gallery__item:nth-child(1) {
+    background-size: 550px;
+    background-position-y: 500px;
+    background-position-x: 370px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .gallery {
@@ -709,9 +717,23 @@ use {
     height: 486px;
     grid-template-areas: "a b c" "a b c" "a b c" "a d c" "a d f" "e d f" "e d f" "e d f";
   }
+  .gallery__item:nth-child(1) {
+    background-image: url("../images/car/black_audi.jpeg");
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: right;
+  }
+  .gallery__item:nth-child(3) {
+    background-image: url("../images/car/grey_bmw.jpeg");
+    background-size: 500px;
+    background-position: center;
+  }
   .gallery__item:nth-child(4) {
     grid-area: d;
-    background-image: url("../images/car/forth.png");
+    background-image: url("../images/car/grey_volvo.jpeg");
+    background-size: 390px;
+    background-position-y: 370px;
+    background-position-x: right;
   }
   .gallery__item:nth-child(5) {
     grid-area: e;
@@ -724,6 +746,10 @@ use {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    background-image: url("../images/car/yellow_mustang.jpeg");
+    background-size: 550px;
+    background-position-y: 420px;
+    background-position-x: 370px;
   }
 }
 @media screen and (min-width: 1200px) {
