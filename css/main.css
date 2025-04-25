@@ -825,7 +825,7 @@ use {
           justify-content: space-between;
 }
 .footer__link:hover {
-  color: rgba(255, 255, 255, 0.2);
+  color: #39ff14;
 }
 .footer__span {
   color: #39ff14;
