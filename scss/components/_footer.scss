@@ -40,8 +40,8 @@
   display: flex;
   margin: 0 auto;
   margin-top: 10px;
-  max-width: 320px;
   color: $titleColor;
+  justify-content: center;
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
