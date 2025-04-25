@@ -802,6 +802,7 @@ use {
 }
 .footer__item:last-child {
   text-align: right;
+  width: 360px;
 }
 .footer__title {
   font-weight: 600;
@@ -816,9 +817,18 @@ use {
   color: #999;
   -webkit-transition: color 250ms ease-in-out;
   transition: color 250ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer__link:hover {
   color: rgba(255, 255, 255, 0.2);
+}
+.footer__span {
+  color: #39ff14;
 }
 
 .map-container {
