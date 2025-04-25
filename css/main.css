@@ -802,7 +802,6 @@ use {
 }
 .footer__item:last-child {
   text-align: right;
-  width: 360px;
 }
 .footer__title {
   font-weight: 600;
@@ -884,6 +883,7 @@ use {
   }
   .footer__item:last-child {
     text-align: right;
+    width: 400px;
   }
   .footer__title {
     font-size: 24px;

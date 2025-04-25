@@ -14,7 +14,6 @@
   }
   &__item:last-child {
     text-align: right;
-    width: 360px;
   }
   &__title {
     font-weight: 600;
@@ -86,6 +85,7 @@
     }
     &__item:last-child {
       text-align: right;
+      width: 400px;
     }
     &__title {
       font-size: 24px;
