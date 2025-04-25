@@ -142,10 +142,32 @@ use {
   padding-top: 30px;
   padding-bottom: 50px;
   margin-bottom: 50px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-sm@1x.png");
-  background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-sm@1x.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  z-index: 0;
+}
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.hero__wrap {
+  position: relative;
+  z-index: 1;
 }
 .hero__title {
   font-weight: 700;
@@ -183,34 +205,11 @@ use {
   color: #fff;
 }
 
-@supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-sm@1x.webp")) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-sm@1x.webp");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-sm@1x.webp");
-    background-size: cover;
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-sm@2x.png");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-sm@2x.png");
-    background-size: cover;
-  }
-  @supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-sm@2x.webp")) {
-    .hero {
-      background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-sm@2x.webp");
-      background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-sm@2x.webp");
-      background-size: cover;
-    }
-  }
-}
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .hero {
     padding-top: 80px;
     padding-bottom: 80px;
     margin-bottom: 50px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-large@1x.png");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-large@1x.png");
   }
   .hero__wrap {
     padding: 0 30px;
@@ -224,32 +223,12 @@ use {
     font-size: 20px;
     margin-bottom: 60px;
   }
-  @supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-large@1x.webp")) {
-    .hero {
-      background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-large@1x.webp");
-      background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-large@1x.webp");
-    }
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (max-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 768px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-large@2x.png");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-large@2x.png");
-  }
-  @supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-large@2x.webp")) {
-    .hero {
-      background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-mobile-large@2x.webp");
-      background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-mobile-large@2x.webp");
-    }
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .hero {
     padding-top: 100px;
     padding-bottom: 90px;
     margin-bottom: 80px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-tablet@1x.png");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-tablet@1x.png");
   }
   .hero__title {
     font-size: 64px;
@@ -262,24 +241,6 @@ use {
   }
   .hero__btn {
     margin: 0 0;
-  }
-  @supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-tablet@1x.webp")) {
-    .hero {
-      background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-tablet@1x.webp");
-      background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-tablet@1x.webp");
-    }
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-tablet@2x.png");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-tablet@2x.png");
-  }
-  @supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-tablet@2x.webp")) {
-    .hero {
-      background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-tablet@2x.webp");
-      background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-tablet@2x.webp");
-    }
   }
 }
 @media screen and (min-width: 1200px) {
@@ -287,8 +248,6 @@ use {
     padding-top: 100px;
     padding-bottom: 90px;
     margin-bottom: 100px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-desktop@1x.png");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-desktop@1x.png");
   }
   .hero__title {
     font-size: 64px;
@@ -301,24 +260,6 @@ use {
   }
   .hero__btn {
     margin: 0 0;
-  }
-  @supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-desktop@1x.webp")) {
-    .hero {
-      background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-desktop@1x.webp");
-      background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-desktop@1x.webp");
-    }
-  }
-}
-@media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-desktop@2x.png");
-    background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-desktop@2x.png");
-  }
-  @supports (background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-desktop@2x.webp")) {
-    .hero {
-      background-image: -webkit-gradient(linear, left top, right top, from(#2b2a29), color-stop(23.95%, rgba(43, 42, 41, 0.98)), color-stop(67.55%, rgba(43, 42, 41, 0.8)), color-stop(87.55%, rgba(43, 42, 41, 0.3)), to(rgba(102, 102, 102, 0))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/bg-desktop@2x.webp");
-      background-image: linear-gradient(90deg, #2b2a29 0%, rgba(43, 42, 41, 0.98) 23.95%, rgba(43, 42, 41, 0.8) 67.55%, rgba(43, 42, 41, 0.3) 87.55%, rgba(102, 102, 102, 0) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../images/bg-desktop@2x.webp");
-    }
   }
 }
 .services {
