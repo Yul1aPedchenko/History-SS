@@ -58,15 +58,19 @@
     border-radius: 30px;
     display: inline-block;
     margin: 0 auto;
-    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
   }
   &__btn:hover {
     background-color: transparent;
     color: $titleColor;
+    box-shadow: 0 0 15px #39ff14;
   }
 }
 @supports (
-  background-image: $gradientOverlay, $gradientOverlayBlack, url("../images/bg-mobile-sm@1x.webp")
+  background-image: $gradientOverlay,
+  $gradientOverlayBlack,
+  url("../images/bg-mobile-sm@1x.webp")
 ) {
   .hero {
     background-image: $gradientOverlay, $gradientOverlayBlack,
