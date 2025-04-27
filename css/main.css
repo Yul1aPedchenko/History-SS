@@ -32,6 +32,10 @@ button {
   box-sizing: border-box;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -98,15 +102,19 @@ use {
 
 .header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 .header__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__link {
   display: -webkit-box;
@@ -115,27 +123,260 @@ use {
 }
 .header__logo {
   height: 25px;
+  max-width: 200px;
+}
+.header__phone-wrap, .header__logo-icon, .header__schedule {
+  display: none;
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .header__logo {
     height: 30px;
+    max-width: 225px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
+  .header__menu-wrap {
+    display: none;
+  }
   .header__wrap {
     padding: 28px 0;
   }
   .header__logo {
     height: 39px;
+    max-width: 300px;
+  }
+  .header__phone-wrap, .header__schedule, .header__text-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__logo-icon {
+    height: 39px;
+  }
+  .header__schedule {
+    font-size: 14px;
+    font-weight: 300;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .header__phone-link {
+    color: #fff;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }
+  .header__phone-link:hover {
+    color: #39ff14;
+  }
+  .header__phone-icon {
+    width: 24px;
+    height: 24px;
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
+    fill: none;
+    stroke: #39ff14;
+    margin-right: 5px;
+  }
+  .header__phone-span {
+    color: #39ff14;
+  }
+  .left {
+    display: none;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__wrap {
-    padding: 35px 0;
+    padding: 30px 0;
   }
   .header__logo {
     height: 52px;
+    max-width: 390px;
+  }
+  .header__text-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__phone-wrap {
+    margin-top: 5px;
+  }
+  .header__logo-icon {
+    height: 62px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 200px;
+  }
+  .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .right {
+    display: none;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+.header__menu-icon {
+  fill: #fff;
+}
+
+.menu-toggle {
+  min-height: 25px;
+  min-width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background-color: #2b2a29;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+}
+
+.mobile-menu__icon-close {
+  fill: #fff;
+}
+.mobile-menu__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobile-menu__logo-icon {
+  max-width: 150px;
+  margin-bottom: 30px;
+}
+.mobile-menu__schedule {
+  text-align: center;
+  color: #999;
+}
+.mobile-menu__schedule-span {
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+.mobile-menu__phone-wrap {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mobile-menu__phone-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: underline;
+  color: #fff;
+}
+.mobile-menu__phone-icon {
+  height: 17px;
+  width: 17px;
+  margin-right: 10px;
+  stroke: #39ff14;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+  display: block;
+  fill: none;
+}
+
+@media screen and (min-width: 400px) {
+  .mobile-menu__logo-icon {
+    max-width: 300px;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
   }
 }
 .hero {
@@ -902,17 +1143,6 @@ use {
   }
   .reviews__btn-link {
     font-size: 26px;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
   }
 }
 @keyframes blink {
