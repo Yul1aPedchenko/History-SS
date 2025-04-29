@@ -79,7 +79,7 @@
     }
     // &__title {
     //   font-size: 32px;
-      margin-bottom: 50px;
+    margin-bottom: 50px;
     // }
     &__wrap {
       padding: 45px;
@@ -111,7 +111,7 @@
   .services {
     padding-bottom: 80px;
     &__title {
-    //   font-size: 32px;
+      //   font-size: 32px;
       margin-bottom: 50px;
     }
     &__wrap {
@@ -135,7 +135,8 @@
         margin-bottom: 0;
       }
     }
-    &__item:nth-child(1) {
+    &__item:nth-child(1),
+    &__item:nth-child(5) {
       border-right: 1px solid $borderColor;
       padding-right: 20px;
       width: 349px;
@@ -151,7 +152,8 @@
     }
     &__item:nth-child(3) {
       border-top: 1px solid $borderColor;
-      height: 158px;
+      border-bottom: 1px solid $borderColor;
+      height: 178px;
       padding-top: 30px;
       padding-left: 10px;
       margin-right: 20px;
@@ -169,6 +171,13 @@
           margin-bottom: 0px;
         }
       }
+    }
+    &__item:nth-child(5) {
+      margin-top: 20px;
+    }
+    &__item:nth-child(6) {
+      padding-top: 30px;
+      border-top: 1px solid $borderColor;
     }
     &__description {
       font-size: 14px;
@@ -198,7 +207,8 @@
       width: 470px;
       height: 125px;
     }
-    &__item:nth-child(1) {
+    &__item:nth-child(1),
+    &__item:nth-child(5) {
       width: 490px;
       padding-right: 30px;
       padding-left: 20px;
@@ -210,16 +220,21 @@
     &__item:nth-child(2) {
       padding-left: 10px;
       padding-right: 20px;
+      height: 145px;
     }
     &__item:nth-child(3) {
       padding-left: 20px;
       margin-right: 20px;
+      height: 165px;
     }
     &__item:nth-child(4) {
       width: 490px;
       padding-left: 30px;
       padding-right: 20px;
-      margin-top: 30px;
+      margin-top: 20px;
+    }
+    &__item:nth-child(6) {
+      padding-left: 10px;
     }
   }
 }
@@ -236,13 +251,14 @@
     }
     &__item {
       width: 505px;
-      height: 124px;
+      height: 135px;
       padding: 0;
     }
     &__item:not(:last-child) .services__item-wrap .services__description {
       margin-bottom: 0;
     }
-    &__item:nth-child(1) {
+    &__item:nth-child(1),
+    &__item:nth-child(5) {
       width: 535px;
       padding-left: 10px;
       padding-right: 62px;
@@ -251,20 +267,32 @@
     &__item:nth-child(2) {
       padding-left: 0;
       padding-right: 10px;
+      height: 165px;
+      .services__icon {
+        stroke: none;
+      }
     }
     &__item:nth-child(3) {
       padding-left: 10px;
       padding-right: 0;
       margin-right: 30px;
+      height: 195px;
     }
     &__item:nth-child(4) {
+      margin-top: 30px;
       width: 535px;
+      padding-right: 10px;
+    }
+    &__item:nth-child(5) {
+      margin-top: 30px;
+    }
+    &__item:nth-child(6){
+      padding-left: 0;
       padding-right: 10px;
     }
     &__subwrap {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
     }
     &__subtitle {
       margin-bottom: 0;
@@ -273,12 +301,25 @@
     &__description {
       margin-left: 75px;
     }
+    &__icon {
+      fill: none;
+      stroke: $accentColor;
+    }
+    &__item:nth-child(5),
+    &__item:nth-child(6) {
+      .services__icon {
+        fill: $accentColor;
+        stroke: none;
+      }
+    }
     &__icon-wrap {
       width: 60px;
       height: 60px;
-      display: block;
+      display: flex;
       border-radius: 50%;
       border: 1px solid $iconBorder;
+      align-items: center;
+      justify-content: center;
     }
   }
   .big-circle {
