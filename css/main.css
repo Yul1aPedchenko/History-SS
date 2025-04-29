@@ -1137,7 +1137,9 @@ use {
   font-size: 14px;
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
