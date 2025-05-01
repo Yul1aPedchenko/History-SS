@@ -1313,7 +1313,7 @@ use {
   border-top: 1px solid #393837;
 }
 .footer__wrap {
-  padding: 15px;
+  padding: 15px 0;
   text-align: center;
 }
 .footer__list {
@@ -1333,7 +1333,7 @@ use {
   text-align: center;
 }
 .footer__item:last-child {
-  width: 240px;
+  width: 290px;
   margin: 0 auto;
   margin-top: 20px;
 }
