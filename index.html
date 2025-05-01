@@ -50,8 +50,13 @@
             </div>
           </div>
           <a href="./index.html" class="header__link">
+            <img
+              src="./images/svg/full_logo.svg"
+              alt="full-logo"
+              class="header__full-logo"
+            />
             <svg class="header__logo">
-              <use href="./images/symbol-defs.svg#icon-logo"></use>
+              <use href="./images/symbol-defs.svg#icon-fully-logo"></use>
             </svg>
           </a>
           <div class="header__phone-wrap right">
@@ -70,96 +75,50 @@
             src="./images/svg/full_logo.svg"
             alt="full_logo"
           />
-
-          <div class="header__menu-wrap">
-            <button
-              class="menu-toggle js-open-menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <svg class="header__menu-icon" width="24" height="16">
-                <use href="./images/symbol-defs.svg#icon-menu"></use>
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
-        <!-- <picture>
-          <source
-            srcset="
-              ./images/bg-mobile-sm@1x.webp 1x,
-              ./images/bg-mobile-sm@2x.webp 2x
-            "
-            media="(max-width: 479px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/bg-mobile-sm@1x.png 1x,
-              ./images/bg-mobile-sm@2x.png 2x
-            "
-            media="(max-width: 479px)"
-          />
-          <source
-            srcset="
-              ./images/bg-mobile-large@1x.webp 1x,
-              ./images/bg-mobile-large@2x.webp 2x
-            "
-            media="(min-width: 480px) and (max-width: 767px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/bg-mobile-large@1x.png 1x,
-              ./images/bg-mobile-large@2x.png 2x
-            "
-            media="(min-width: 480px) and (max-width: 767px)"
-          />
-          <source
-            srcset="
-              ./images/bg-tablet@1x.webp 1x,
-              ./images/bg-tablet@2x.webp 2x
-            "
-            media="(min-width: 768px) and (max-width: 1199px)"
-            type="image/webp"
-          />
-          <source
-            srcset="./images/bg-tablet@1x.png 1x, ./images/bg-tablet@2x.png 2x"
-            media="(min-width: 768px) and (max-width: 1199px)"
-          />
-          <source
-            srcset="
-              ./images/bg-desktop@1x.webp 1x,
-              ./images/bg-desktop@2x.webp 2x
-            "
-            media="(min-width: 1200px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/bg-desktop@1x.png 1x,
-              ./images/bg-desktop@2x.png 2x
-            "
-            media="(min-width: 1200px)"
-          />
-          <img
-            src="./images/bg-mobile-sm@1x.png"
-            alt="Фонове зображення для секції Hero"
-            class="hero__bg"
-          />
-        </picture> -->
         <div class="container">
-          <div class="hero__wrap">
-            <h1 class="hero__title">Ремонт авто у <span>Львові</span> </h1>
-            <p class="hero__text">
-              І<span>СТО</span>РІЯ - автосервіс, який займається проведенням
-              технічного обслуговування, кузовного ремонту та діагностики різних
-              автомобілів.
-            </p>
-            <a href="tel:+380679401888" class="hero__btn">ЗАТЕЛЕФОНУЙ!</a>
+          <div class="hero-mobile__wrap">
+            <div class="hero-mobile__menu-wrap">
+              <button
+                class="menu-toggle js-open-menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+              >
+                <svg class="hero-mobile__menu-icon" width="24" height="16">
+                  <use href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg>
+              </button>
+            </div>
+            <a href="./index.html" class="hero-mobile__link">
+              <img
+                src="./images/svg/full_logo.svg"
+                alt="full-logo"
+                class="hero-mobile__full-logo"
+              />
+            </a>
+          </div>
+          <div class="hero__main-wrap">
+            <div class="hero__wrap">
+              <h1 class="hero__title">
+                Ремонт авто <br />
+                у <span>Львові</span> 
+              </h1>
+              <p class="hero__text">
+                І<span>СТО</span>РІЯ - автосервіс, який займається проведенням
+                технічного обслуговування, кузовного ремонту та діагностики
+                різних автомобілів.
+              </p>
+              <button class="hero__btn" data-open-modal>
+                <svg class="hero__phone-icon">
+                  <use href="./images/symbol-defs.svg#icon-tabler-phone"></use>
+                </svg>
+                ТЕЛЕФОНУЙ
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -280,7 +239,9 @@
                       <h3 class="services__subtitle">Страхування авто</h3>
                     </div>
                     <p class="services__description">
-                      Надійне страхування авто: захист від ДТП, викрадення та пошкоджень. Індивідуальний підхід, вигідні умови, швидке оформлення.
+                      Надійне страхування авто: захист від ДТП, викрадення та
+                      пошкоджень. Індивідуальний підхід, вигідні умови, швидке
+                      оформлення.
                     </p>
                   </div>
                 </li>
@@ -425,16 +386,106 @@
             >
           </p>
           <div class="mobile-menu__phone-wrap">
-            <a href="tel:+380969401888" class="mobile-menu__phone-link">
-              <svg class="mobile-menu__phone-icon">
-                <use href="./images/symbol-defs.svg#icon-phone"></use>
-              </svg>
-              +38 096 940 1 888</a
-            >
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__phone-link" href="tel:+380679401888"
+                  ><span>Відділ ТО:</span>
+                  <div class="mobile-menu__phone-subwrap">
+                    <svg class="mobile-menu__phone-icon">
+                      <use href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                    <span class="mobile-menu__span">
+                      +38 <span class="mobile-menu__phone-span">067</span> 940 1
+                      <span class="mobile-menu__phone-span"> 888</span>
+                    </span>
+                  </div>
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__phone-link" href="tel:+380979401888">
+                  <span>Кузовний ремонт:</span>
+                  <div class="mobile-menu__phone-subwrap">
+                    <svg class="mobile-menu__phone-icon">
+                      <use href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                    <span class="mobile-menu__span">
+                      +38 <span class="mobile-menu__phone-span">097</span> 940 1
+                      <span class="mobile-menu__phone-span"> 888</span>
+                    </span>
+                  </div></a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__phone-link" href="tel:+380689401888"
+                  ><span>Відділ запчастин:</span>
+                  <div class="mobile-menu__phone-subwrap">
+                    <svg class="mobile-menu__phone-icon">
+                      <use href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                    <span class="mobile-menu__span">
+                      +38 <span class="mobile-menu__phone-span">068</span> 940 1
+                      <span class="mobile-menu__phone-span"> 888</span>
+                    </span>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+    <div class="backdrop is-hidden" data-modal-body>
+      <div class="modal">
+        <button class="modal__close-btn" type="button" aria-label="Close modal">
+          ×
+        </button>
+        <ul class="modal__list">
+          <li class="modal__item">
+            <a class="modal__phone-link" href="tel:+380679401888"
+              ><span class="modal__phone-link-name">Відділ ТО:</span>
+              <div class="modal__phone-subwrap">
+                <svg class="modal__phone-icon">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                <span class="modal__span">
+                  +38 <span class="modal__phone-span">067</span> 940 1
+                  <span class="modal__phone-span"> 888</span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a class="modal__phone-link" href="tel:+380979401888">
+              <span class="modal__phone-link-name">Кузовний ремонт:</span>
+              <div class="modal__phone-subwrap">
+                <svg class="modal__phone-icon">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                <span class="modal__span">
+                  +38 <span class="modal__phone-span">097</span> 940 1
+                  <span class="modal__phone-span"> 888</span>
+                </span>
+              </div></a
+            >
+          </li>
+          <li class="modal__item">
+            <a class="modal__phone-link" href="tel:+380689401888"
+              ><span class="modal__phone-link-name">Відділ запчастин:</span>
+              <div class="modal__phone-subwrap">
+                <svg class="modal__phone-icon">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                <span class="modal__span">
+                  +38 <span class="modal__phone-span">068</span> 940 1
+                  <span class="modal__phone-span"> 888</span>
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal-phones.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-.header__menu-icon {
+.hero-mobile__menu-icon {
   fill: $titleColor;
 }
 .menu-toggle {
@@ -61,15 +61,23 @@
     font-weight: 600;
     color: $titleColor;
   }
-  &__phone-wrap {
-    margin-top: 20px;
+  &__phone-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__list {
+    margin-top: 40px;
+  }
+  &__phone-subwrap {
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
   }
   &__phone-link {
     display: flex;
     align-items: center;
-    text-decoration: underline;
+    font-size: 20px;
     color: $titleColor;
   }
   &__phone-icon {
@@ -80,6 +88,12 @@
     animation: blink 1s infinite;
     display: block;
     fill: none;
+  }
+  &__span {
+    text-decoration: underline;
+  }
+  &__phone-span {
+    color: $accentColor;
   }
 }
 @media screen and (min-width: 400px){

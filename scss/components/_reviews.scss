@@ -12,6 +12,7 @@
     margin-bottom: 20px;
     color: $accentColor;
     font-weight: 700;
+    font-size: 18px;
   }
   &__text {
     color: $textColor;
@@ -42,6 +43,9 @@
     &__wrap {
       padding: 30px;
     }
+    &__title {
+      font-size: 18px;
+    }
     &__text {
       font-size: 16px;
     }
@@ -66,6 +70,9 @@
     &__wrap {
       padding: 30px 40px;
       max-width: 950px;
+    }
+    &__title {
+      font-size: 20px;
     }
     &__text {
         font-size: 20px;
