@@ -1043,9 +1043,8 @@ use {
   }
 }
 .gallery {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
-
 .gallery__list {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -1054,13 +1053,11 @@ use {
   height: 290px;
   grid-template-areas: "a b" "a c" "d c";
 }
-
 .gallery__item {
   border-radius: 4px;
   background-size: cover;
   background-position: bottom;
 }
-
 .gallery__item:nth-child(1) {
   grid-area: a;
   background-image: url("../images/car/yellow_mustang.jpeg");
@@ -1068,32 +1065,26 @@ use {
   background-position-y: 340px;
   background-position-x: 270px;
 }
-
 .gallery__item:nth-child(2) {
   grid-area: b;
   background-image: url("../images/car/second.png");
 }
-
 .gallery__item:nth-child(3) {
   grid-area: c;
   background-image: url("../images/car/grey_bmw.jpeg");
 }
-
 .gallery__item:nth-child(4) {
   grid-area: d;
   background-image: url("../images/car/forth.png");
 }
-
 .gallery__item:nth-child(5) {
   display: none;
   background-image: url("../images/car/fifth.png");
 }
-
 .gallery__item:nth-child(6) {
   display: none;
   background-image: url("../images/car/sixth.png");
 }
-
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .gallery__list {
     height: 486px;
@@ -1107,7 +1098,7 @@ use {
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .gallery {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
   .gallery__list {
     grid-template-rows: repeat(8, 1fr);
@@ -1153,12 +1144,9 @@ use {
 @media screen and (min-width: 1200px) {
   .gallery__list {
     grid-template-rows: repeat(8, 1fr);
-    gap: 18px;
-    grid-template-areas: "a b c" "a b c" "a b c" "a d c" "a d f" "e d f" "e d f" "e d f";
-  }
-  .gallery__list {
     gap: 30px;
     height: 771px;
+    grid-template-areas: "a b c" "a b c" "a b c" "a d c" "a d f" "e d f" "e d f" "e d f";
   }
   .gallery__item:nth-child(1) {
     background-size: 700px;
@@ -1186,8 +1174,14 @@ use {
     background-image: url("../images/car/red_car_sto.jpeg");
   }
 }
+
 .reviews {
   margin-bottom: 60px;
+}
+.reviews__full-logo {
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .reviews__wrap {
   border-radius: 12px;
@@ -1203,10 +1197,10 @@ use {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #39ff14;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .reviews__title {
@@ -1226,7 +1220,7 @@ use {
 .reviews__text {
   color: #999;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: justify;
 }
 .reviews__link {
@@ -1257,7 +1251,7 @@ use {
 
 @media screen and (min-width: 480px) {
   .reviews__wrap {
-    padding: 30px;
+    padding: 25px;
   }
   .reviews__title {
     font-size: 18px;
@@ -1273,24 +1267,31 @@ use {
   }
 }
 @media screen and (min-width: 768px) {
+  .reviews__full-logo {
+    margin-bottom: 40px;
+    max-width: 180px;
+  }
   .reviews__wrap {
     max-width: 738px;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 1100px) {
+  .reviews__full-logo {
+    max-width: 250px;
+  }
   .reviews__wrap {
-    padding: 30px 40px;
+    padding: 25px 30px;
     max-width: 950px;
   }
   .reviews__title {
-    font-size: 20px;
+    font-size: 18px;
   }
   .reviews__text {
-    font-size: 20px;
+    font-size: 16px;
   }
   .reviews__link {
-    font-size: 21px;
+    font-size: 17px;
   }
   .reviews__btn-link {
     font-size: 22px;
@@ -1298,13 +1299,13 @@ use {
 }
 @media screen and (min-width: 1200px) {
   .reviews__text {
-    font-size: 24px;
+    font-size: 20px;
   }
   .reviews__link {
-    font-size: 25px;
+    font-size: 19px;
   }
   .reviews__btn-link {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 @keyframes blink {
