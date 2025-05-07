@@ -38,13 +38,20 @@
     margin-bottom: 15px;
     font-size: 18px;
   }
-  &__description {
+  &__description,
+  &__guarantee {
     font-size: 14px;
     line-height: 150%;
     color: $textColor;
   }
   &__icon-wrap {
     display: none;
+  }
+  &__wrap-guarantee {
+    margin-top: 15px;
+  }
+  &__guarantee {
+    color: $titleColor;
   }
 }
 .big-circle {
@@ -85,8 +92,12 @@
         margin-bottom: 20px;
       }
     }
-    &__description {
+    &__description,
+  &__guarantee {
       font-size: 16px;
+    }
+    &__wrap-guarantee {
+      padding: 25px;
     }
   }
   .big-circle {
@@ -173,7 +184,8 @@
       padding-top: 30px;
       border-top: 1px solid $borderColor;
     }
-    &__description {
+    &__description,
+  &__guarantee {
       font-size: 16px;
     }
   }
@@ -230,7 +242,8 @@
     &__subtitle {
       font-size: 20px;
     }
-    &__description {
+    &__description,
+  &__guarantee {
       font-size: 16px;
     }
   }
@@ -257,7 +270,6 @@
     &__item:nth-child(5) {
       width: 535px;
       padding-left: 10px;
-      // padding-right: 62px;
       margin-right: 30px;
     }
     &__item:nth-child(2) {

@@ -42,6 +42,17 @@
   &__span {
     color: $accentColor;
   }
+  &__subwrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  &__full-logo {
+    max-width: 140px;
+    margin-top: 15px;
+  }
 }
 .map-container {
   border-radius: 8px;
@@ -49,8 +60,7 @@
 }
 .map-link {
   display: flex;
-  margin: 0 auto;
-  margin-top: 10px;
+  // margin: 0 auto;
   color: $titleColor;
   justify-content: center;
 }
@@ -86,6 +96,17 @@
     &__link {
       font-size: 20px;
     }
+    &__subwrap {
+      flex-direction: row;
+    }
+    &__full-logo {
+      margin:  0;
+      max-width: 120px;
+    }
+  }
+  .map-link {
+    margin-right: 20px;
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -114,6 +135,17 @@
     &__link {
       font-size: 20px;
     }
+    &__subwrap {
+      flex-direction: row;
+    }
+    &__full-logo {
+      margin:  0;
+      max-width: 130px;
+    }
+  }
+  .map-link {
+    margin-right: 20px;
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
