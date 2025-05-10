@@ -25,10 +25,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .backdrop.is-hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -38,6 +41,12 @@
   border-radius: 8px;
   max-width: 500px;
   width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 0;
 }
 
 .no-scroll {
